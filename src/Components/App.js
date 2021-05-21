@@ -1,9 +1,9 @@
-import './App.css';
-import Player from './Components/Player'
+import '../App.css';
+import Dashboard from './Dashboard'
 function App() {
   return (
     <div className="App">
-        <Player/>
+        <Dashboard/>
     </div>
   );
 }
