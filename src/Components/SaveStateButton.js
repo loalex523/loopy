@@ -1,12 +1,14 @@
 import React from 'react'
 import store from '../redux/store'
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 
 
 function SaveStateButton({state}){
+    const dispatch = useDispatch()
+
     const saveState = (e) => {
         e.preventDefault()
-        store.dispatch({type: 'settings/stateAdded', payload: { 
+        dispatch({type: 'settings/stateAdded', payload: { 
             url: state.url,
             pip: state.pip,
             playing: state.playing,
@@ -20,7 +22,9 @@ function SaveStateButton({state}){
             seekTime: state.seekTime,
             endPoint: state.endPoint,
             loops: state.loops}})
-    }
+            console.log(store.getState())
+       }
+    
     return (
         <div>
             <button onClick={saveState}>

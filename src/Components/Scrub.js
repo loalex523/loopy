@@ -22,24 +22,27 @@ function Scrub( { state, setState, player } ){
     function handleSeekChange(e){
         setMouse(true)
         setState(prevState => ({...prevState, seekTime: e.target.value}))
+
     }
 
     const handleSeekMouseUp = e => {
         e.preventDefault()
         setMouse(false)
-        setState(prevState => ({...prevState, seekTime: state.seekTime}))
+        // setState(prevState => ({...prevState, seekTime: state.seekTime}))
         player.current.seekTo(state.seekTime, 'seconds')
     }
 
-    return(<form onSubmit={handleSeek}>
-        {/* <label>
-            Seektime: 
-            <input min="0" type="number" value={state.seekTime} onChange={handleSeekChange}/>
-            <input type="submit" value="Submit"/>
-        </label> */}
-        <tr>
-            <th>Seek</th>
-            <td>
+    return(
+    <div>
+        {/* <form onSubmit={handleSeek}>
+                {/* <label>
+                    Seektime: 
+                    <input min="0" type="number" value={state.seekTime} onChange={handleSeekChange}/>
+                    <input type="submit" value="Submit"/>
+                </label> 
+        </form> */}
+            Seek: 
+            <div>
                 <input
                 type='range' min={0} max={state.duration}
                 value={state.seekTime}
@@ -47,12 +50,10 @@ function Scrub( { state, setState, player } ){
                 onChange={handleSeekChange}
                 onMouseUp={handleSeekMouseUp}
                 />
-            </td>
-            <div>
                 {mouseDown? <Time seconds={state.seekTime}/> : null}
             </div>
-        </tr>
-    </form>)
+    </div>
+    )
 }
 
 export default Scrub;

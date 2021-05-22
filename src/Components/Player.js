@@ -7,6 +7,8 @@ import Loader from './Loader'
 import { useDispatch } from 'react-redux'
 import Timestamp from './Timestamp'
 import store from '../redux/store'
+import SettingsList from './SettingsList'
+
 import SaveStateButton from './SaveStateButton'
 
 function Player(){
@@ -30,7 +32,8 @@ function Player(){
     const [current_url, setCurrent] = useState(" ")
     // const playerContext = React.createContext(state)    
     const player = useRef(null)
-   
+
+    // store.subscribe()
 
     useEffect(() => {
         // localStorage.getItem('currentState')
@@ -39,8 +42,7 @@ function Player(){
             player.current.seekTo(state.seekTime, 'seconds')
             setState(prevState => ({...prevState, loops: state.loops+1}))
             // localStorage.setItem('currentState', state)
-            store.subscribe(() => console.log(store.getState()))
-            console.log('Saved to local storage.')
+            // console.log('Saved to local storage.')
     }}, [state.current])
 
     function handleURLSubmit(e){
@@ -116,6 +118,8 @@ function Player(){
             />
             <Timestamp state={state}/>
             <SaveStateButton state={state}/>
+            <SettingsList/>
+
         </div>
     )
 }
