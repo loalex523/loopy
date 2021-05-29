@@ -16,7 +16,8 @@ export default function stateReducer(state = initialState, action){
                 settings: [
                     ...state.settings,
                     {
-                        id: nextSettingId(state.settings),
+                        // id: nextSettingId(state.settings),
+                        id: action.payload.id,
                         url: action.payload.url,
                         pip: action.payload.pip,
                         playing: action.payload.playing,

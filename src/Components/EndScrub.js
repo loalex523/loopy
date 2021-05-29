@@ -20,8 +20,11 @@ function Endpoint({state, player, setState }){
         e.preventDefault()
         setMouse(true)
         setEP(e.target.value)
-        if (state.current_EP > state.duration || state.current_EP < state.seekTime){
+        if (current_EP > state.duration || current_EP < state.seekTime){
             console.log('Invalid value for endpoint. Cannot set endpoint.');
+            // setEP(0)
+            // setState(prevState => ({...prevState, endPoint: state.seekTime}))
+            // player.current.seekTo(state.duration, 'seconds')
         }
         else{
             // console.log('Endpoint successfully handled.')
@@ -53,8 +56,8 @@ function Endpoint({state, player, setState }){
         Endpoint: 
         <div>
             <input
-            type='range' min={state.current} max={state.duration}
-            value={current_EP}
+            type='range' min={state.seekTime} max={state.duration}
+            value={state.endPoint}
             // onMouseMove={handleEndpointMouseDown}
             onChange={handleEndpointChange}
             onMouseUp={handleEndpointMouseUp}
