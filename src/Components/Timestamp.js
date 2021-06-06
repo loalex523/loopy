@@ -11,7 +11,7 @@ export default function Timestamp(){
             {
                 (state) => {
                 return(
-                <div>
+                <div className="inline-flex space-x-4">
                     <div>
                         Id:
                         {state.id}

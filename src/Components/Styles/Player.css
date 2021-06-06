@@ -2,3 +2,15 @@
      height: 500px;   
      padding: 100px;
 }
+
+input[type="range"]::-webkit-slider-thumb{
+     width: 15px;
+     -webkit-appearance: none;
+     appearance: none;
+     height: 15px;
+     cursor: ew-resize;
+     background: #FFF;
+     box-shadow: -405px 0 0 400px #605E5C;
+     border-radius: 50%;
+     
+}

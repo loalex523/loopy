@@ -1,5 +1,4 @@
 import React from 'react'
-import store from '../redux/store'
 import { connect, useDispatch, useSelector } from "react-redux";
 import { PlayerConsumer } from './PlayerContext'
 
@@ -63,7 +62,7 @@ function SaveStateButton(){
         {
             (state) => {
                 return (
-                    <button onClick={e => saveState(e, state)}>
+                    <button className="bg-violet-100 text-violet-700 text-base font-semibold px-6 py-2 rounded-lg" onClick={e => saveState(e, state)}>
                         Save State
                     </button>
                 )
