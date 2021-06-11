@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useDispatch } from 'react-redux'
 import Time from './Time'
 
 function SettingCard( {setting, setState, setValid, player} ){
     const dispatch = useDispatch() 
+
+    const [hover, setHover] = useState(false)
 
     function deleteHandler(e, id){
         e.preventDefault()
@@ -37,8 +39,8 @@ function SettingCard( {setting, setState, setValid, player} ){
     }
 
     return(
-        <div className="flex space-x-4 border-gray-400 px-8 py-8 rounded-lg object-cover bg-white ">
-            <button className=" hover:text-blue-300 inline-grid rounded-lg p-4 border border-gray-300" onClick={handleClick}>
+        <div className="flex space-x-4 border-gray-400 px-8 py-8 rounded-lg object-cover bg-white" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+            <button className=" hover:text-blue-300 inline-grid rounded-lg p-4 border border-gray-300 w-4/6" onClick={handleClick}>
                 <label>
                     {setting.id}
                 </label>
@@ -49,9 +51,13 @@ function SettingCard( {setting, setState, setValid, player} ){
                     {setting.url}
                 </label>
             </button>
-            <button className="w-1/2 h-3/4 hover:bg-gray-600 flex items-center justify-center rounded-md text-white bg-black" onClick={(e) => deleteHandler(e, setting.id)}>
-                Delete
-            </button> 
+            {
+                hover?  
+                <button className="hover:bg-gray-600 flex items-center justify-center rounded-md w-48 h-5 text-white bg-black" onClick={(e) => deleteHandler(e, setting.id)}>
+                    Delete
+                </button>  : null
+            }
+           
         </div>
 
         

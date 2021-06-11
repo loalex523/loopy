@@ -50,8 +50,8 @@ function Endpoint({state, player, setState }){
                     <input type="submit" value="Submit"/>
                 </label> 
         </form> */}
-        Endpoint: 
         <div>
+        Endpoint: 
             <input
             className="rounded-lg overflow-hidden appearance-none bg-gray-400 h-3 w-128"
             type='range' min={state.seekTime} max={state.duration}

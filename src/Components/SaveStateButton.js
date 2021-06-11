@@ -62,9 +62,11 @@ function SaveStateButton(){
         {
             (state) => {
                 return (
-                    <button className="bg-violet-100 text-violet-700 text-base font-semibold px-6 py-2 rounded-lg" onClick={e => saveState(e, state)}>
-                        Save State
-                    </button>
+                    <div className="p-5 font-sans">
+                        <button className="bg-white border border-gray-400 text-gray-500 text-base font-semibold px-6 py-2 rounded-lg" onClick={e => saveState(e, state)}>
+                            Save State
+                        </button>
+                    </div>
                 )
             }
         }

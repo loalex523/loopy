@@ -7,7 +7,7 @@ function Loader({handleSubmit, handleURLChange}){
     // }
 
    
-    return(<form className="inline-flex focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none w-full text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-2 pl-10" type="text" onSubmit={e => handleSubmit(e)}>
+    return(<form className="inline-flex focus:border-light-blue-500 focus:ring-1 mb-5 focus:ring-light-blue-500 focus:outline-none w-full text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-2 pl-10" type="text" onSubmit={e => handleSubmit(e)}>
             <label>
                 <span> Enter URL </span>
             </label>

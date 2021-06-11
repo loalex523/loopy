@@ -41,8 +41,8 @@ function Scrub( { state, setState, player, validMedia } ){
                     <input type="submit" value="Submit"/>
                 </label> 
         </form> */}
-            Seek: 
             <div>
+            Seek: 
                 <input
                 type='range' min={0} max={state.duration}
                 value={state.seekTime}

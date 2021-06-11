@@ -9,6 +9,7 @@ import Timestamp from './Timestamp'
 import SettingsList from './SettingsList'
 import { PlayerProvider } from './PlayerContext'
 import SaveStateButton from './SaveStateButton'
+import Volume from './Volume'
 import './Styles/Player.css';
 
 function Player(){
@@ -126,14 +127,15 @@ function Player(){
     }
 
     return(
-        <div className="p-8 flex flex-col text-center items-center w-4/5">
+        <div className="p-8 flex flex-col text-center items-center w-4/5 ">
             <PlayerProvider value={state}>
-                <div className="rounded-md border-white p-5 bg-gray-400 h-96 w-5/6">
+                <div className="rounded-md border-white p-5 bg-gray-400 h-96 w-5/6 mb-5">
                     {/*state.url.trim().length === 0?  */
                         validMedia? <ReactPlayer
                             width='100%'
                             height='100%'
                             // controls={true} 
+                            volume={state.volume}
                             useref={player}
                             onDuration={handleDuration}
                             onProgress={handlePlaytime}
@@ -172,6 +174,12 @@ function Player(){
                         // handleSeek={handleSeek}
                         // handleSeekChange={handleSeekChange}
                         // seekTime={state.seekTime}
+                    />
+                    <Volume 
+                        state={state}
+                        setState={setState}
+                        player={player}
+                        validMedia={validMedia}    
                     />
                      <SaveStateButton/>
                 </div>
