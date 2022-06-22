@@ -15,7 +15,7 @@ import './Styles/Player.css';
 function Player(){
     const [state, setState] = useState({
         id: 0,
-        url: "https://www.youtube.com/watch?v=Ce6so35INYU&ab_channel=JangYoon-ju-TopicJangYoon-ju-Topic",
+        url: "",
         pip: false,
         playing: true,
         controls: false,
