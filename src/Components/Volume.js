@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import Time from './Time'
 
 function Volume( {state, setState, player, validMedia} ){
     const [mouseDown, setMouse] = useState(false)
