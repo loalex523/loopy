@@ -41,24 +41,25 @@ function Player(){
         Object.keys(localStorage).forEach(function (i){
             dispatch({type: 'settings/stateAdded', 
             payload: { 
-            id: (JSON.parse(localStorage.getItem(i))["id"]),
-            url: (JSON.parse(localStorage.getItem(i))["url"]),
-            pip: (JSON.parse(localStorage.getItem(i))["pip"]),
-            playing: (JSON.parse(localStorage.getItem(i))["playing"]),
-            controls: (JSON.parse(localStorage.getItem(i))["controls"]),
-            light: (JSON.parse(localStorage.getItem(i))["light"]),
-            loop: (JSON.parse(localStorage.getItem(i))["loop"]),
-            volume: (JSON.parse(localStorage.getItem(i))["volume"]),
-            duration: (JSON.parse(localStorage.getItem(i))["duration"]),
-            playbackRate: (JSON.parse(localStorage.getItem(i))["playbackRate"]),
-            current: (JSON.parse(localStorage.getItem(i))["current"]),
-            seekTime: (JSON.parse(localStorage.getItem(i))["seekTime"]),
-            endPoint: (JSON.parse(localStorage.getItem(i))["endPoint"]),
-            loops: (JSON.parse(localStorage.getItem(i))["loops"])}})
+            id: ((localStorage.getItem(i))["\"id\""]),
+            url: ((localStorage.getItem(i))["\"url\""]),
+            pip: ((localStorage.getItem(i))["\"pip\""]),
+            playing: ((localStorage.getItem(i))["\"playing\""]),
+            controls: ((localStorage.getItem(i))["\"controls\""]),
+            light: ((localStorage.getItem(i))["\"light\""]),
+            loop: ((localStorage.getItem(i))["\"loop\""]),
+            volume: ((localStorage.getItem(i))["\"volume\""]),
+            duration: ((localStorage.getItem(i))["\"duration\""]),
+            playbackRate: ((localStorage.getItem(i))["\"playbackRate\""]),
+            current: ((localStorage.getItem(i))["\"current\""]),
+            seekTime: ((localStorage.getItem(i))["\"seekTime\""]),
+            endPoint: ((localStorage.getItem(i))["\"endPoint\""]),
+            loops: ((localStorage.getItem(i))["\"loops\""])}})
         })
     }, [dispatch])
 
     useEffect(() => {
+        console.log(localStorage)
         dispatchToStore()
     }, [dispatchToStore])
 

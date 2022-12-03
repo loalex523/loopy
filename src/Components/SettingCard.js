@@ -16,7 +16,6 @@ function SettingCard( {setting, setState, setValid, player} ){
 
     function handleClick(e){
         e.preventDefault();
-        console.log(setting.id)
         setState(prevState => ({...prevState,
             id: setting.id,
             url: setting.url,
@@ -35,7 +34,6 @@ function SettingCard( {setting, setState, setValid, player} ){
         }), () => {
             player.current.seekTo(setting.seekTime,'seconds')
         })
-        setValid(true)
     }
 
     return(
