@@ -59,7 +59,6 @@ function Player(){
     }, [dispatch])
 
     useEffect(() => {
-        console.log(localStorage)
         dispatchToStore()
     }, [dispatchToStore])
 
@@ -68,13 +67,7 @@ function Player(){
         checkLoopback()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [state.current]) 
-
-    function checkMedia(){
-        state.url.trim().length === 0? 
-            setValidMedia(false):setValidMedia(true)
-    }
     
-
     function checkLoopback(){
         if (state.current >= state.endPoint && state.seekTime !== 0 && state.endPoint !== 0 && state.playing === true){
             player.current.seekTo(state.seekTime, 'seconds')
