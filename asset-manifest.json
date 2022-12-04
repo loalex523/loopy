@@ -1,22 +1,15 @@
 {
   "files": {
-    "main.css": "/loopy/static/css/main.36e0ab97.chunk.css",
-    "main.js": "/loopy/static/js/main.e54a1fc1.chunk.js",
-    "main.js.map": "/loopy/static/js/main.e54a1fc1.chunk.js.map",
-    "runtime-main.js": "/loopy/static/js/runtime-main.63a7ee96.js",
-    "runtime-main.js.map": "/loopy/static/js/runtime-main.63a7ee96.js.map",
-    "static/js/2.cd266752.chunk.js": "/loopy/static/js/2.cd266752.chunk.js",
-    "static/js/2.cd266752.chunk.js.map": "/loopy/static/js/2.cd266752.chunk.js.map",
-    "static/js/3.ea50666c.chunk.js": "/loopy/static/js/3.ea50666c.chunk.js",
-    "static/js/3.ea50666c.chunk.js.map": "/loopy/static/js/3.ea50666c.chunk.js.map",
+    "main.css": "/loopy/static/css/main.2f54aad1.css",
+    "main.js": "/loopy/static/js/main.592ffd15.js",
+    "static/js/787.d7e1baf5.chunk.js": "/loopy/static/js/787.d7e1baf5.chunk.js",
     "index.html": "/loopy/index.html",
-    "static/css/main.36e0ab97.chunk.css.map": "/loopy/static/css/main.36e0ab97.chunk.css.map",
-    "static/js/2.cd266752.chunk.js.LICENSE.txt": "/loopy/static/js/2.cd266752.chunk.js.LICENSE.txt"
+    "main.2f54aad1.css.map": "/loopy/static/css/main.2f54aad1.css.map",
+    "main.592ffd15.js.map": "/loopy/static/js/main.592ffd15.js.map",
+    "787.d7e1baf5.chunk.js.map": "/loopy/static/js/787.d7e1baf5.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.63a7ee96.js",
-    "static/js/2.cd266752.chunk.js",
-    "static/css/main.36e0ab97.chunk.css",
-    "static/js/main.e54a1fc1.chunk.js"
+    "static/css/main.2f54aad1.css",
+    "static/js/main.592ffd15.js"
   ]
 }
